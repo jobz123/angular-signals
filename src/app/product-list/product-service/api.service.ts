@@ -8,7 +8,7 @@ import { Injectable, signal, } from '@angular/core';
 export class ApiService {
 
   public products = toSignal<IProduct[]>(this.http.get<IProduct[]>('https://fakestoreapi.com/products'));
-  public products$ = toObservable(this.products);
+  // public products$ = toObservable(this.products);
   constructor(private http: HttpClient) {
 
   }
